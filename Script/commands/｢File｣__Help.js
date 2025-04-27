@@ -64,7 +64,7 @@ if (args[0] == "all") {
      var obj = Object.keys(data);
     var firstname = data[obj].name.replace("@", "");
     let callback = function () {
-        api.sendMessage({ body:`✿𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝙻𝙸𝚂𝚃✿\n\n` + msg + `✿══════════════✿\n│𝗨𝘀𝗲 ${prefix}help [Name?]\n│𝗨𝘀𝗲 ${prefix}help [Page?]\n│𝗡𝗔𝗠𝗘 𝗢𝗪𝗡𝗘𝗥 : │𝐒𝐀𝐈𝐌 ッ\n│𝗧𝗢𝗧𝗔𝗟 :  ${commands.size}\n————————————`, mentions: [{
+        api.sendMessage({ body:`✿𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝙻𝙸𝚂𝚃✿\n\n` + msg + `✿══════════════✿\n│𝗨𝘀𝗲 ${prefix}help [Name?]\n│𝗨𝘀𝗲 ${prefix}help [Page?]\n│𝗡𝗔𝗠𝗘 𝗢𝗪𝗡𝗘𝗥 : │𝐒𝐀𝐈𝐌  ☠️\n│𝗧𝗢𝗧𝗔𝗟 :  ${commands.size}\n————————————`, mentions: [{
                            tag: firstname,
                            id: admID,
                            fromIndex: 0,
@@ -104,12 +104,12 @@ const first = numberOfOnePage * page - numberOfOnePage;
 
    for (let cmds of helpView) msg += `•—»[ ${cmds} ]«—•\n`;
     const siu = `╭──────•◈•──────╮\n |        𝐆𝐚𝐚𝐫𝐚 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭\n |   𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝙻𝙸𝚂𝚃       \n╰──────•◈•──────╯`;
-const text = `╭──────•◈•──────╮\n│𝗨𝘀𝗲 ${prefix}help [Name?]\n│𝗨𝘀𝗲 ${prefix}help [Page?]\n│𝗡𝗔𝗠𝗘 𝗢𝗪𝗡𝗘𝗥 : │𝐒𝐀𝐈𝐌 ッ\n│𝗧𝗢𝗧𝗔𝗟 : [${arrayInfo.length}]\n│📛🄿🄰🄶🄴📛 :  [${page}/${Math.ceil(arrayInfo.length/numberOfOnePage)}]\n╰──────•◈•──────╯`; 
+const text = `╭──────•◈•──────╮\n│𝗨𝘀𝗲 ${prefix}help [Name?]\n│𝗨𝘀𝗲 ${prefix}help [Page?]\n│𝗡𝗔𝗠𝗘 𝗢𝗪𝗡𝗘𝗥 : │𝐒𝐀𝐈𝐌  ☠️ \n│𝗧𝗢𝗧𝗔𝗟 : [${arrayInfo.length}]\n│📛🄿🄰🄶🄴📛 :  [${page}/${Math.ceil(arrayInfo.length/numberOfOnePage)}]\n╰──────•◈•──────╯`; 
     var link = [
-"https://i.imgur.com/q7yAFCr.jpeg", "https://i.imgur.com/F2QP2K8.gif", "https://i.imgur.com/q7yAFCr.jpeg", "https://i.imgur.com/F2QP2K8.gif",
-"https://i.imgur.com/F2QP2K8.gif",
-"https://i.imgur.com/q7yAFCr.jpeg",
-"https://i.imgur.com/F2QP2K8.gif",
+"https://i.imgur.com/GnTHDqq.jpeg", "https://i.imgur.com/GnTHDqq.jpeg", "https://i.imgur.com/GnTHDqq.jpeg", "https://i.imgur.com/GnTHDqq.jpeg",
+"https://i.imgur.com/GnTHDqq.jpeg",
+"https://i.imgur.com/GnTHDqq.jpeg",
+"https://i.imgur.com/GnTHDqq.jpeg",
     ]
      var callback = () => api.sendMessage({ body: siu + "\n\n" + msg  + text, attachment: fs.createReadStream(__dirname + "/cache/loidbutter.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/loidbutter.jpg"), event.messageID);
     return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname + "/cache/loidbutter.jpg")).on("close", () => callback());
